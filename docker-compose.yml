@@ -1,0 +1,17 @@
+version: '3'
+services:
+  n8n:
+    image: n8nio/n8n
+    restart: always
+    ports:
+      - "5678:5678"
+    environment:
+      - N8N_BASIC_AUTH_ACTIVE=true
+      - N8N_BASIC_AUTH_USER=un44
+      - N8N_BASIC_AUTH_PASSWORD=21_Rozasamor
+      - N8N_ENCRYPTION_KEY=7e91fd0895e4492bb83cd3d7b6f8e299
+      - N8N_HOST=n8n-jhaniel.up.railway.app
+      - N8N_PROTOCOL=https
+      - WEBHOOK_URL=https://n8n-jhaniel.up.railway.app
+    volumes:
+      - /root/.n8n
